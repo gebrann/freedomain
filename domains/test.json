@@ -1,0 +1,10 @@
+{
+  "owner": {
+    "username": "zyrocfnd"
+  },
+  "description": "tester",
+  "record": {
+    "CNAME": "fioo.org"
+  },
+  "proxied": true
+}
