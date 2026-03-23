@@ -1,0 +1,10 @@
+{
+  "owner": {
+    "username": "kenjiew"
+  },
+  "description": "test",
+  "record": {
+    "CNAME": "example.com"
+  },
+  "proxied": true
+}
