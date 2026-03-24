@@ -1,0 +1,10 @@
+{
+  "owner": {
+    "username": "kenjiew"
+  },
+  "description": "zyroc foundation domain",
+  "record": {
+    "CNAME": "zyrocfnd.github.io"
+  },
+  "proxied": true
+}
