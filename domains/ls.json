@@ -4,7 +4,7 @@
   },
   "description": "test",
   "record": {
-    "CNAME": "www.example.com"
+    "CNAME": "fioo.org"
   },
   "proxied": true
 }
