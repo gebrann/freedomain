@@ -73,13 +73,49 @@ for (var idx in domains) {
   //   }
   // }
 
-  if ('TXT' in domainData.record) {
-    for (var txt in domainData.record.TXT) {
-      commits.push(
-        TXT(subdomain, domainData.record.TXT[txt])
-      );
+    // Handle TXT records
+    if (data.records.TXT) {
+        if (Array.isArray(data.records.TXT)) {
+            for (var txt in data.records.TXT) {
+                records.push(TXT(subdomainName, data.records.TXT[txt].length <= 255 ? "\"" + data.records.TXT[txt] + "\"" : data.records.TXT[txt]));
+            }
+        } else {
+            records.push(TXT(subdomainName, data.records.TXT.length <= 255 ? "\"" + data.records.TXT + "\"" : data.records.TXT));
+        }
     }
-  }
+
+    // Handle URL records
+    if (data.records.URL) {
+        records.push(A(subdomainName, IP("192.0.2.1"), CF_PROXY_ON));
+    }
+}
+
+var reserved = require("./util/reserved.json");
+
+// Handle reserved domains
+for (var i = 0; i < reserved.length; i++) {
+    var subdomainName = reserved[i];
+    records.push(A(subdomainName, IP("192.0.2.1"), CF_PROXY_ON));
+}
+
+// Zone last updated TXT record
+records.push(TXT("_zone-updated", "\"" + Date.now().toString() + "\""));
+
+var ignored = [
+    IGNORE("\\*", "A"),
+    IGNORE("*._domainkey", "TXT"),
+    IGNORE("@", "*"),
+    IGNORE("_acme-challenge", "TXT"),
+    IGNORE("_discord", "TXT"),
+    IGNORE("_dmarc", "TXT"),
+    IGNORE("_gh-zyrocfnd-o", "TXT"),
+    IGNORE("_gh-zyrocfnd-o.**", "TXT"),
+    IGNORE("_github-pages-challenge-zyrocfnd", "TXT"),
+    IGNORE("_github-pages-challenge-zyrocfnd.**", "TXT"),
+    IGNORE("_psl", "TXT"),
+    IGNORE("ns[1-4]", "A,AAAA")
+];
+
 
   // if ('CAA' in domainData.record) {
   //   for (var caa in domainData.record.CAA) {
