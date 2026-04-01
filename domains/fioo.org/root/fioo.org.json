@@ -5,7 +5,7 @@
   "subdomain": "@",
   "owner": {
     "username": "zyrocfnd",
-    "email": "admin@fioo.org"
+    "email": "admin@zyroc.org"
   },
 
   "record": {
@@ -23,5 +23,5 @@
       "2606:50c0:8003::153"
     ]
   },
-  "proxied": true
+  "proxied": false
 }
