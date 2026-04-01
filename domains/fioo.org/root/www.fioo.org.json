@@ -1,0 +1,15 @@
+{
+    "description": "CNAME WWW",
+    "domain": "fioo.org",
+    "subdomain": "www",
+    "owner": {
+        "repo": "https://github.com/zyrocfnd/fioo.org",
+        "email": "admin@fioo.org"
+    },
+    "record": {
+        "CNAME": [
+            "fioo.org"
+        ]
+    },
+    "proxied": true
+}
