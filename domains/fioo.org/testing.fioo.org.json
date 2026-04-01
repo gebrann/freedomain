@@ -3,10 +3,10 @@
   "subdomain": "testing",
   "owner": {
     "username": "zyrocfnd",
-    "email": "me@me.tld"
+    "email": "admin@zyroc.org"
   },
   "record": {
-    "CNAME": "jmb.my.id"
+    "CNAME": "example.com"
   },
   "proxy": false
 }
