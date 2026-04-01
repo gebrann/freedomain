@@ -1,0 +1,11 @@
+{
+  "domain": "fioo.org",
+  "subdomain": "github",
+  "owner": {
+    "username": "zyrocfnd"
+  },
+  "record": {
+    "TXT": "4449cca319e97c300aec44f2899c58"
+  },
+  "proxy": false
+}
