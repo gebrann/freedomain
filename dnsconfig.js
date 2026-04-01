@@ -151,5 +151,4 @@ Object.keys(recordsByDomain).forEach(function(domainName) {
 
 // Commit all DNS records for each domain
 Object.keys(recordsByDomain).forEach(function(domainName) {
-  D(domainName, regNone, providerCf, recordsByDomain[domainName], ignored);
-});
+  D(domainName, regNone, providerCf, recordsByDomain[domainName], ignored);});
