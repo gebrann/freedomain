@@ -1,30 +1,15 @@
 {
-  "description": "Root domain",
-
-  "domain": "fioo.org",
-  "subdomain": "@",
-  "owner": {
-    "username": "zyrocfnd",
-    "email": "admin@zyroc.org"
-  },
-
-  "record": {
-    "A": [
-      "185.199.108.153",
-      "185.199.109.153",
-      "185.199.110.153",
-      "185.199.111.153"
-    ],
-
-    "AAAA": [
-      "2606:50c0:8000::153",
-      "2606:50c0:8001::153",
-      "2606:50c0:8002::153",
-      "2606:50c0:8003::153"
-    ],
-    "CNAME":[
-      "zyrocfnd.github.io/fioo.org"
-    ]
-  },
-  "proxied": true
+    "description": "ROOT DOMAIN",
+    "domain": "fioo.org",
+    "subdomain": "@",
+    "owner": {
+        "repo": "https://github.com/zyrocfnd/fioo.org",
+        "email": "admin@zyroc.org"
+    },
+    "record": {
+        "CNAME": [
+            "zyrocfnd.github.io/fioo.org"
+        ]
+    },
+    "proxied": true
 }
