@@ -1,7 +1,7 @@
 {
   "description": "Root domain",
 
-  "domain": "is-not-a.dev",
+  "domain": "fioo.org",
   "subdomain": "@",
   "owner": {
     "username": "zyrocfnd",
